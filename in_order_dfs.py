@@ -14,7 +14,7 @@ class Tree:
         as they are visited in
         a in-order traversal."""
         current = self.root
-        stack = []
+        stack = list()
         result = list()
         while True:
             if current is not None:
@@ -35,8 +35,10 @@ tree.root.left = Node(2)
 tree.root.right = Node(3)
 tree.root.left.left = Node(4)
 tree.root.left.right = Node(5)
+tree.root.right.left = Node(6)
+tree.root.right.right = Node(7)
 
 
 # Test
-# Should be [4, 2, 5, 1, 3]
+# Should be [4, 2, 5, 1, 6, 3, 7]
 print(tree.in_order_dfs())
