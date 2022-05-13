@@ -13,16 +13,15 @@ class Tree:
         """Print out all tree nodes
         as they are visited in
         a pre-order traversal."""
-        stack = list()
-        stack.append(self.root)
+        stack = [self.root]
         result = list()
         while stack:
-            n = stack.pop()
-            result.append(n.value)
-            if n.right:
-                stack.append(n.right)
-            if n.left:
-                stack.append(n.left)
+            node = stack.pop()
+            result.append(node.value)
+            if node.right:
+                stack.append(node.right)
+            if node.left:
+                stack.append(node.left)
         return result
 
 
@@ -32,8 +31,10 @@ tree.root.left = Node(2)
 tree.root.right = Node(3)
 tree.root.left.left = Node(4)
 tree.root.left.right = Node(5)
+tree.root.right.left = Node(6)
+tree.root.right.right = Node(7)
 
 
 # Test
-# Should be [1, 2, 4, 5, 3]
+# Should be [1, 2, 4, 5, 3, 6, 7]
 print(tree.pre_order_dfs())
