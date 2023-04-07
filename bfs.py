@@ -36,7 +36,17 @@ tree.root.right = Node(3)
 tree.root.left.left = Node(4)
 tree.root.left.right = Node(5)
 
+print("""
+    Tree:
+    -----------------------
+    |            1        |
+    |          /   \      |
+    |        2       3    |
+    |      /   \          |
+    |    4       5        |
+    -----------------------
+""")
 
 # Test
 # Should be [1, 2, 3, 4, 5]
-print(tree.bfs())
+print(f"Breadth First Search Traversal: {tree.bfs()}")

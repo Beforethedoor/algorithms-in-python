@@ -34,7 +34,17 @@ tree.root.left.right = Node(5)
 tree.root.right.left = Node(6)
 tree.root.right.right = Node(7)
 
+print("""
+    Tree:
+    -----------------------
+    |           1         |
+    |        /    \       |
+    |      2        3     |
+    |    /   \     /  \   |
+    |  4       5  6    7  |
+    -----------------------
+""")
 
 # Test
 # Should be [1, 2, 4, 5, 3, 6, 7]
-print(tree.pre_order_dfs())
+print(f"Depth First Search pre-order traversal: {tree.pre_order_dfs()}")
