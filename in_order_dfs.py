@@ -17,7 +17,7 @@ class Tree:
         stack = list()
         result = list()
         while True:
-            if current is not None:
+            if current:
                 stack.append(current)
                 current = current.left
             elif stack:
